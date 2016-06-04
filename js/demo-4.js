@@ -8,7 +8,7 @@ var demo = (function(window, undefined) {
   /** 
    * Array of all life lessons 
    */
-  var perspectives = ["short-big-life", "conscious"];
+  var perspectives = ["short-big-life", "conscious", "slope", "why", "adversity", "grit", "upwind", "climbing-hills", "attitude", "self-awareness", "clouds-and-dirt", "habit", "expand-outside", "do-what-you-love", "first-principles", "create-value", "process-goal", "probabilities", "experience-purpose"];
 
   /**
    * Enum of CSS selectors.
@@ -74,6 +74,7 @@ var demo = (function(window, undefined) {
     var hash = window.location.hash.substring(1);
     if (hash.length > 0) {
       var cardId = perspectives.indexOf(hash);
+      console.log("how many perspectives? ", perspectives.length);
       _playSequence(true, cardId);
     }
   };
@@ -174,7 +175,9 @@ var demo = (function(window, undefined) {
       } else {
 
         console.log("the card image target:: ", e.target);
-
+        window.location.hash = "#" + perspectives[id];
+        // console.log("here we have the id", id);
+        // console.log("and here we have the e", e);
         _setPatternBgImg(e.target);
       }
 
@@ -183,7 +186,7 @@ var demo = (function(window, undefined) {
 
     } else {
       // Close sequence.
-
+      window.location.hash = "";
       var closeCard = card.closeCard();
       var position = closeCard.duration() * 0.8; // 80% of close card tween.
 
