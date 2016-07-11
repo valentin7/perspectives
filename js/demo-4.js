@@ -8,7 +8,7 @@ var demo = (function(window, undefined) {
   /** 
    * Array of all life lessons 
    */
-  var perspectives = ["short-big-life", "conscious", "slope", "why", "adversity", "grit", "upwind", "climbing-hills", "attitude", "self-awareness", "clouds-and-dirt", "habit", "expand-outside", "do-what-you-love", "first-principles", "create-value", "process-goal", "probabilities", "experience-purpose"];
+  var perspectives = ["short-big-life", "conscious", "slope", "why", "adversity", "grit", "upwind", "climbing-hills", "attitude", "self-awareness", "clouds-and-dirt", "habit", "expand-outside", "do-what-you-love", "first-principles", "create-value", "process-goal", "probabilities", "experience-purpose", "breathe"];
 
   /**
    * Enum of CSS selectors.
